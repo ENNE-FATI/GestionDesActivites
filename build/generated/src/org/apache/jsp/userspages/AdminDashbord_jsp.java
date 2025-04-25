@@ -1,0 +1,273 @@
+package org.apache.jsp.userspages;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+
+public final class AdminDashbord_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html; charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html lang=\"fr\">\n");
+      out.write("<head>\n");
+      out.write("    <meta charset=\"UTF-8\">\n");
+      out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+      out.write("    <title>Tableau de bord - Administration</title>\n");
+      out.write("    <!-- Bootstrap CSS -->\n");
+      out.write("    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
+      out.write("    <!-- Bootstrap Icons -->\n");
+      out.write("    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css\">\n");
+      out.write("    <style>\n");
+      out.write("        body {\n");
+      out.write("            min-height: 100vh;\n");
+      out.write("            display: flex;\n");
+      out.write("        }\n");
+      out.write("        .sidebar {\n");
+      out.write("            width: 250px;\n");
+      out.write("            background-color: #212529;\n");
+      out.write("            color: white;\n");
+      out.write("            min-height: 100vh;\n");
+      out.write("            position: fixed;\n");
+      out.write("            left: 0;\n");
+      out.write("            top: 0;\n");
+      out.write("            z-index: 100;\n");
+      out.write("        }\n");
+      out.write("        .sidebar-header {\n");
+      out.write("            padding: 1rem;\n");
+      out.write("            border-bottom: 1px solid rgba(255, 255, 255, 0.1);\n");
+      out.write("        }\n");
+      out.write("        .sidebar-menu {\n");
+      out.write("            padding: 1rem 0;\n");
+      out.write("        }\n");
+      out.write("        .sidebar-menu a {\n");
+      out.write("            display: flex;\n");
+      out.write("            align-items: center;\n");
+      out.write("            padding: 0.75rem 1rem;\n");
+      out.write("            color: rgba(255, 255, 255, 0.8);\n");
+      out.write("            text-decoration: none;\n");
+      out.write("            transition: all 0.3s;\n");
+      out.write("        }\n");
+      out.write("        .sidebar-menu a:hover, .sidebar-menu a.active {\n");
+      out.write("            background-color: rgba(255, 255, 255, 0.1);\n");
+      out.write("            color: white;\n");
+      out.write("        }\n");
+      out.write("        .sidebar-menu i {\n");
+      out.write("            margin-right: 10px;\n");
+      out.write("        }\n");
+      out.write("        .sidebar-footer {\n");
+      out.write("            padding: 1rem;\n");
+      out.write("            border-top: 1px solid rgba(255, 255, 255, 0.1);\n");
+      out.write("            position: absolute;\n");
+      out.write("            bottom: 0;\n");
+      out.write("            width: 100%;\n");
+      out.write("        }\n");
+      out.write("        .content {\n");
+      out.write("            flex: 1;\n");
+      out.write("            margin-left: 250px;\n");
+      out.write("            padding: 2rem;\n");
+      out.write("            background-color: #f8f9fa;\n");
+      out.write("        }\n");
+      out.write("        .card {\n");
+      out.write("            border-radius: 10px;\n");
+      out.write("            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);\n");
+      out.write("            transition: transform 0.3s;\n");
+      out.write("        }\n");
+      out.write("        .card:hover {\n");
+      out.write("            transform: translateY(-5px);\n");
+      out.write("        }\n");
+      out.write("        .card-icon {\n");
+      out.write("            font-size: 1.5rem;\n");
+      out.write("            color: #6c757d;\n");
+      out.write("        }\n");
+      out.write("        @media (max-width: 768px) {\n");
+      out.write("            .sidebar {\n");
+      out.write("                width: 100%;\n");
+      out.write("                position: relative;\n");
+      out.write("                min-height: auto;\n");
+      out.write("            }\n");
+      out.write("            .content {\n");
+      out.write("                margin-left: 0;\n");
+      out.write("            }\n");
+      out.write("        }\n");
+      out.write("    </style>\n");
+      out.write("</head>\n");
+      out.write("<body>\n");
+      out.write("    <!-- Sidebar -->\n");
+      out.write("    <div class=\"sidebar\">\n");
+      out.write("        <div class=\"sidebar-header\">\n");
+      out.write("            <h4>Administration</h4>\n");
+      out.write("        </div>\n");
+      out.write("        <div class=\"sidebar-menu\">\n");
+      out.write("            <a href=\"dashboard\" class=\"active\">\n");
+      out.write("                <i class=\"bi bi-speedometer2\"></i> Tableau de bord\n");
+      out.write("            </a>\n");
+      out.write("            <a href=\"GestionActivities.jsp\">\n");
+      out.write("                <i class=\"bi bi-list-check\"></i> Activités\n");
+      out.write("            </a>\n");
+      out.write("            <a href=\"GestionGuide.jsp\">\n");
+      out.write("                <i class=\"bi bi-people\"></i> Guides\n");
+      out.write("            </a>\n");
+      out.write("        </div>\n");
+      out.write("        <div class=\"sidebar-footer\">\n");
+      out.write("            <a href=\"Connexion.jsp\" class=\"btn btn-outline-light w-100\">\n");
+      out.write("                <i class=\"bi bi-box-arrow-left\"></i> Déconnexion\n");
+      out.write("            </a>\n");
+      out.write("        </div>\n");
+      out.write("    </div>\n");
+      out.write("    \n");
+      out.write("    <!-- Content -->\n");
+      out.write("    <div class=\"content\">\n");
+      out.write("        <div class=\"container-fluid\">\n");
+      out.write("            <div class=\"row mb-4\">\n");
+      out.write("                <div class=\"col\">\n");
+      out.write("                    <h1>Tableau de bord</h1>\n");
+      out.write("                    <p class=\"text-muted\">Bienvenue dans votre tableau de bord d'administration</p>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("            \n");
+      out.write("            <div class=\"row g-4\">\n");
+      out.write("                <div class=\"col-md-4\">\n");
+      out.write("                    <div class=\"card h-100\">\n");
+      out.write("                        <div class=\"card-body\">\n");
+      out.write("                            <div class=\"d-flex justify-content-between align-items-center mb-3\">\n");
+      out.write("                                <h5 class=\"card-title mb-0\">Total des activités</h5>\n");
+      out.write("                                <div class=\"card-icon\">\n");
+      out.write("                                    <i class=\"bi bi-activity\"></i>\n");
+      out.write("                                </div>\n");
+      out.write("                            </div>\n");
+      out.write("                            <h2 class=\"mb-1\">24</h2>\n");
+      out.write("                            <p class=\"text-muted small\">+5 depuis le mois dernier</p>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("                <div class=\"col-md-4\">\n");
+      out.write("                    <div class=\"card h-100\">\n");
+      out.write("                        <div class=\"card-body\">\n");
+      out.write("                            <div class=\"d-flex justify-content-between align-items-center mb-3\">\n");
+      out.write("                                <h5 class=\"card-title mb-0\">Total des guides</h5>\n");
+      out.write("                                <div class=\"card-icon\">\n");
+      out.write("                                    <i class=\"bi bi-people\"></i>\n");
+      out.write("                                </div>\n");
+      out.write("                            </div>\n");
+      out.write("                            <h2 class=\"mb-1\">12</h2>\n");
+      out.write("                            <p class=\"text-muted small\">+2 depuis le mois dernier</p>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("                <div class=\"col-md-4\">\n");
+      out.write("                    <div class=\"card h-100\">\n");
+      out.write("                        <div class=\"card-body\">\n");
+      out.write("                            <div class=\"d-flex justify-content-between align-items-center mb-3\">\n");
+      out.write("                                <h5 class=\"card-title mb-0\">Activités à venir</h5>\n");
+      out.write("                                <div class=\"card-icon\">\n");
+      out.write("                                    <i class=\"bi bi-calendar-event\"></i>\n");
+      out.write("                                </div>\n");
+      out.write("                            </div>\n");
+      out.write("                            <h2 class=\"mb-1\">6</h2>\n");
+      out.write("                            <p class=\"text-muted small\">Pour les 7 prochains jours</p>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("            \n");
+      out.write("            <!-- Activités récentes -->\n");
+      out.write("            <div class=\"row mt-5\">\n");
+      out.write("                <div class=\"col-12\">\n");
+      out.write("                    <div class=\"card\">\n");
+      out.write("                        <div class=\"card-header bg-white\">\n");
+      out.write("                            <h5 class=\"mb-0\">Activités récentes</h5>\n");
+      out.write("                        </div>\n");
+      out.write("                        <div class=\"card-body\">\n");
+      out.write("                            <div class=\"table-responsive\">\n");
+      out.write("                                <table class=\"table table-hover\">\n");
+      out.write("                                    <thead>\n");
+      out.write("                                        <tr>\n");
+      out.write("                                            <th>Nom</th>\n");
+      out.write("                                            <th>Catégorie</th>\n");
+      out.write("                                            <th>Date</th>\n");
+      out.write("                                            <th>Statut</th>\n");
+      out.write("                                        </tr>\n");
+      out.write("                                    </thead>\n");
+      out.write("                                    <tbody>\n");
+      out.write("                                        <tr>\n");
+      out.write("                                            <td>Randonnée Atlas</td>\n");
+      out.write("                                            <td>Nature</td>\n");
+      out.write("                                            <td>20/04/2025</td>\n");
+      out.write("                                            <td><span class=\"badge bg-success\">Active</span></td>\n");
+      out.write("                                        </tr>\n");
+      out.write("                                        <tr>\n");
+      out.write("                                            <td>Visite culturelle</td>\n");
+      out.write("                                            <td>Culture</td>\n");
+      out.write("                                            <td>22/04/2025</td>\n");
+      out.write("                                            <td><span class=\"badge bg-primary\">À venir</span></td>\n");
+      out.write("                                        </tr>\n");
+      out.write("                                        <tr>\n");
+      out.write("                                            <td>Excursion désert</td>\n");
+      out.write("                                            <td>Aventure</td>\n");
+      out.write("                                            <td>10/04/2025</td>\n");
+      out.write("                                            <td><span class=\"badge bg-secondary\">Terminée</span></td>\n");
+      out.write("                                        </tr>\n");
+      out.write("                                        <!-- Exemple sans activité -->\n");
+      out.write("                                        <!-- <tr><td colspan=\"4\" class=\"text-center\">Aucune activité récente</td></tr> -->\n");
+      out.write("                                    </tbody>\n");
+      out.write("                                </table>\n");
+      out.write("                            </div>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("        </div>\n");
+      out.write("    </div>\n");
+      out.write("\n");
+      out.write("    <!-- Bootstrap JS -->\n");
+      out.write("    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js\"></script>\n");
+      out.write("</body>\n");
+      out.write("</html>\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
