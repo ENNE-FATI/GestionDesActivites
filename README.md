@@ -49,15 +49,15 @@ En résumé, cette application vise à améliorer l’expérience de réservatio
 ---
 ## Diagramme de classe
 
-![Diagramme de classe ](https://github.com/ENNE-FATI/Projet2Reservation/blob/main/src/java/images/DiagrameClasse.PNG)
+![Diagramme de classe ](https://github.com/ENNE-FATI/GestionDesActivites/blob/main/src/java/images/DiagrameClasse.PNG)
 
 ## Modèle conceptuel de la base généré
-![La base de données ](https://github.com/ENNE-FATI/Projet2Reservation/blob/main/src/java/images/Conception.PNG)
+![La base de données ](https://github.com/ENNE-FATI/GestionDesActivites/blob/main/src/java/images/Conception.PNG)
 
 ## Exécution des tests dans la console
 ![La création des tables ](https://github.com/ENNE-FATI/GestionDesActivites/blob/main/src/java/images/Requetes1.PNG)
-![Ajout de clés étrangères ](https://github.com/ENNE-FATI/Control2/blob/main/src/java/images/Requetes2.PNG)
-![Insertion des données dans les tables](https://github.com/ENNE-FATI/Control2/blob/main/src/java/images/Requetes3.PNG)
+![Ajout de clés étrangères ](https://github.com/ENNE-FATI/GestionDesActivites/blob/main/src/java/images/Requetes2.PNG)
+![Insertion des données dans les tables](https://github.com/ENNE-FATI/GestionDesActivites/blob/main/src/java/images/Requetes3.PNG)
 
 ![Insertion des données dans les tables](https://github.com/ENNE-FATI/GestionDesActivities/blob/main/src/java/images/Requetes4.PNG)
 ![Selection des données dans les table](https://github.com/ENNE-FATI/GestionDesActivities/blob/main/src/java/images/Requetes5.PNG)
