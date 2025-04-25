@@ -55,7 +55,7 @@ En résumé, cette application vise à améliorer l’expérience de réservatio
 ![La base de données ](https://github.com/ENNE-FATI/Projet2Reservation/blob/main/src/java/images/Conception.PNG)
 
 ## Exécution des tests dans la console
-![La création des tables ](https://github.com/ENNE-FATI/Control2/blob/main/src/java/images/Requetes1.PNG)
+![La création des tables ](https://github.com/ENNE-FATI/GestionDesActivites/blob/main/src/java/images/Requetes1.PNG)
 ![Ajout de clés étrangères ](https://github.com/ENNE-FATI/Control2/blob/main/src/java/images/Requetes2.PNG)
 ![Insertion des données dans les tables](https://github.com/ENNE-FATI/Control2/blob/main/src/java/images/Requetes3.PNG)
 
